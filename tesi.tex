@@ -1,0 +1,67 @@
+\documentclass[12pt,a4paper,titlepage]{book}
+
+\usepackage[lighttt]{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[headheight=15.5pt]{geometry}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+
+% configurazione e macro per documento multilingua
+\usepackage[english,italian]{babel}
+\newcommand\eng[1]{\foreignlanguage{english}{#1}}
+\newcommand\eeng[1]{\foreignlanguage{english}{\emph{#1}}}
+
+% configurazione bibliografia e citazioni
+\usepackage[autolang=hyphen,style=numeric-comp]{biblatex}
+\addbibresource{tesi.bib}
+\usepackage[autostyle,italian=quotes]{csquotes}
+
+% personalizzazione testatine e relative marche
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\uppercase{\thechapter.~#1}}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+% personalizzazione titoli di capitoli/sezioni
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter.}{1em}{}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5\baselineskip plus1pt minus1pt}
+
+% personalizzazione indice
+\usepackage{tocloft}
+\renewcommand{\cftdot}{}
+
+% personalizzazione liste
+\usepackage{enumitem}
+\setlist{itemsep=0pt, topsep=1ex, parsep=1ex}
+
+% personalizzazione didascalie figure
+\usepackage[justification=centering]{caption}
+
+\usepackage{lipsum} % cancellami
+
+% ============================================================================
+
+\begin{document}
+\frontmatter
+\pagestyle{plain}
+\include{content/frontespizio}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\tableofcontents
+\cleardoublepage
+\include{content/ringraziamenti}
+\cleardoublepage
+\include{content/abstract}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\mainmatter
+\pagestyle{fancy}
+\include{content/c1}\clearpage{\pagestyle{plain}\cleardoublepage}
+\appendix
+\include{content/a1}\clearpage{\pagestyle{plain}\cleardoublepage}
+
+\backmatter
+\pagestyle{plain}\printbibliography[heading=bibintoc] % bibliografia senza testatine
+\end{document}
