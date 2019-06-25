@@ -23,12 +23,12 @@ Un rapido elenco delle personalizzazioni da me implementate:
 - il font è *Latin Modern* a dimensione 12;
 - il documento è impostato come multilingua italiano-inglese. Per mandare correttamente a capo le parole in inglese occorre racchiuderle all'interno della macro `\eng{}` (o `\eeng{}` per dare il corsivo); per le citazioni in bibliografia basta [specificare la lingua della fonte](https://github.com/fp555/template-tesi/blob/master/tesi.bib#L9);
 - i riferimenti bibliografici nel testo appaiono tra parentesi quadre come numeri, secondo l'ordine alfabetico degli autori;
-- i numeri di pagina sono in basso al centro; il *front matter* ha anche le testatine in alto e le *marche* personalizzate, ad eccezione della prima pagina di ciascun capitolo e delle pagine vuote;
+- i numeri di pagina sono in basso al centro; il *main matter* ha anche le testatine in alto e le *marche* personalizzate, ad eccezione della prima pagina di ciascun capitolo e delle pagine vuote;
 - i capitoli iniziano sempre in una pagina dispari, aggiungendo dove serve una pagina vuota;
 - i titoli dei capitoli hanno uno stile simile a quello della classe `article`;
 - i paragrafi sono spaziati, senza indentazione sulla prima riga;
 - gli elenchi puntati e numerati occupano molto meno spazio nella pagina;
 - l'indice non ha i punti tra i titoli dei capitoli/sezioni e il numero di pagina;
-- le figure hanno la didascalia centrata rispetto alla pagina.
+- le figure hanno la didascalia centrata.
 
 A quanto pare, scrivere un template è il modo migliore di diventare pratici di LaTeX :wink:
